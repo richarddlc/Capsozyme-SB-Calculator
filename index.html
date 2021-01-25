@@ -1,0 +1,235 @@
+<!DOCTYPE html>
+<html>
+    
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Capsozyme-SB Calculator</title>
+        <meta name="description" content="An interactive getting started guide for Brackets.">
+        <link rel="stylesheet" href="/style/bootstrap-4.3.1-dist/bootstrap-4.3.1-dist/css/bootstrap.min.css" >
+        <link rel="stylesheet" href="/style/style.css" >
+        <script src="/jquery/jquery-3.5.1.min.js"></script>
+        <script src="/js/CSBCalc.js"></script>
+        <script src="/style/bootstrap-4.3.1-dist/bootstrap-4.3.1-dist/js/bootstrap.min.js"></script>
+    </head>
+    <body>
+        
+        <div class="bs-example">
+        <nav class="navbar navbar-expand-md navbar-light bg-light ">
+            <a href="#" class="navbar-brand">
+                <img src="/img/Philchema_logo%20no%20bgd.png" height="100" alt="CoolBrand">
+            </a>
+            <div class="collapse navbar-collapse" id="navbarCollapse" >
+               <div class="navbar-nav ">
+                   <h3>CAPSOZYME SB CALCULATOR</h3>
+            </div>
+            </div>
+            <a href="#" class="navbar-brand">
+                <img src="/img/Technical%20logo.png" height="100" alt="CoolBrand">
+            </a>
+        </nav>
+        </div>
+      <form onsubmit="event.preventDefault();"> 
+          <div class="card text-center bg-transparent">
+              <div class="card-header">
+                  <h4>SPECIES</h4>
+              </div>
+              <div class="card-body">
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="species" id="swine" onclick="getSelectedAnimalConstants('swine')">
+                    <label class="form-check-label" for="swine">SWINE</label>
+                </div>
+                <div class="form-check form-check-inline">
+                    <input class="form-check-input" type="radio" name="species" id="poultry" onclick="getSelectedAnimalConstants('poultry')">
+                    <label class="form-check-label" for="poultry">POULTRY</label>
+                </div>
+                </div>
+          </div>
+            <div class="card text-center bg-transparent">
+              <div class="card-header">
+                  <h4>RAW MATERIAL INCLUSION (kg)</h4>
+              </div>
+              <div class="card-body">
+                    <div class="form-row">
+                        <div class="form-group col-md-3">
+                          <label for="rmiSoybeanMeal">Soybean Meal</label>
+                          <input type="number" class="form-control invalid" id="rmiSoybeanMeal" placeholder="" onkeyup="getCapSBInclusion(); validateSingleInput(this)" step="any">
+                        </div>
+                        <div class="form-group col-md-3">
+                          <label for="rmiWheat">Wheat</label>
+                          <input type="number" class="form-control invalid" id="rmiWheat" placeholder="" onkeyup="getCapSBInclusion();  validateSingleInput(this)" step="any">
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="recommendedCSB">Recommended CAPSOZYME SB plus inclusion (kg/ton)</label>
+                          <input type="number" class="form-control" id="recommendedCSB" placeholder="0" value = '0' disabled='true'>
+                        </div>
+                    </div>
+                </div>
+          </div>
+          <div class="card text-center bg-transparent">
+              <div class="card-header">
+                  <h4>RAW MATERIAL PRICE (PhP/kg)</h4>
+              </div>
+              <div class="card-body">
+        <div class="form-row">
+        <div class="form-group col-md-4">
+            <label for="rmpCorn">Corn</label>
+            <input type="number" class="form-control invalid" id="rmpCorn" placeholder="" step="any" name = "rmpCorn" onkeyup=" validateSingleInput(this)">
+        </div>
+         <div class="form-group col-md-4">
+            <label for="rmpCoconutOil">Coconut Oil</label>
+            <input type="number" class="form-control invalid" id="rmpCoconutOil" placeholder="" step="any" name = "rmpCoconutOil" onkeyup=" validateSingleInput(this)">
+        </div>
+         <div class="form-group col-md-4">
+            <label for="rmpWheat">Wheat</label>
+            <input type="number" class="form-control invalid" id="rmpWheat" placeholder="" step="any" name = "rmpWheat" onkeyup=" validateSingleInput(this)">
+        </div>
+         <div class="form-group col-md-4">
+            <label for="rmpSoybeanMeal">Soy Bean Meal</label>
+            <input type="number" class="form-control invalid" id="rmpSoybeanMeal" placeholder="" step="any" name = "rmpSoybeanMeal" onkeyup=" validateSingleInput(this)">
+        </div>
+         <div class="form-group col-md-4">
+            <label for="rmpLysine">Lysine</label>
+            <input type="number" class="form-control invalid" id="rmpLysine" placeholder="" step="any" name = "rmpLysine" onkeyup=" validateSingleInput(this)">
+        </div>
+         <div class="form-group col-md-4">
+            <label for="rmpMethionine">Methionine</label>
+            <input type="number" class="form-control invalid" id="rmpMethionine" placeholder="" step="any" name = "rmpMethionine" onkeyup=" validateSingleInput(this)">
+        </div>
+         <div class="form-group col-md-4">
+            <label for="rmpThreonine">Threonine</label>
+            <input type="number" class="form-control invalid" id="rmpThreonine" placeholder="" step="any" name = "rmpThreonine" onkeyup=" validateSingleInput(this)">
+        </div>
+         <div class="form-group col-md-4">
+            <label for="rmpTryptophan">Tryptophan</label>
+            <input type="number" class="form-control invalid" id="rmpTryptophan" placeholder="" step="any" name = "rmpTryptophan" onkeyup=" validateSingleInput(this)">
+        </div>
+         <div class="form-group col-md-4">
+            <label for="rmpValine">Valine</label>
+            <input type="number" class="form-control invalid" id="rmpValine" placeholder="" step="any" name = "rmpValine" onkeyup=" validateSingleInput(this)">
+        </div>
+    </div>
+                </div>
+              <div class="card-footer text-muted">
+    <button type="submit" class="btn btn-primary" onclick='computeSavingsAndCosts()'>Compute</button>  
+         <button type="button" class="btn btn-outline-danger" onclick='clearInputFields()'>Clear</button>  
+  </div>
+          </div>
+
+    <div id="buttons" class="col-md-12">
+         
+    </div>
+          
+    <div class="card text-center result">
+  <div class="card-header">
+    <h4>SAVINGS AND COST REDUCTION (PhP)</h4>
+  </div>
+  <div class="card-body">
+    <p class="card-text">With these, you will be able to generate:</p>
+    <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+      
+      <div class="row">
+      <div class="col-sm-3">
+          <div class="card lightGreen img-fluid" style="width:500px">
+            <img class="card-img-top species" src="" alt="Card image" style="width:100%">
+          <div class="card-img-overlay inner">
+           <h2 class="card-title" id="savePerKg"></h2>
+            <p class="card-text">per KILOGRAM.</p>
+          </div>
+        </div>
+        <!--<div class="card lightGreen result">
+          <div class="card-body">
+            <h5 class="card-title" id="savePerKg"></h5>
+            <p class="card-text">per KILOGRAM.</p>
+            <a href="#" class="btn btn-primary">Go somewhere</a>
+          </div>
+        </div>-->
+      </div>
+      <div class="col-sm-3">
+        <div class="card lightGreen img-fluid" style="width:500px">
+            <img class="card-img-top species" src="" alt="Card image" style="width:100%">
+          <div class="card-img-overlay inner">
+            <h3 class="card-title" id="savePerBag"></h3>
+            <p class="card-text">per BAG.</p>
+            <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+          </div>
+        </div>
+      </div>
+        <div class="col-sm-3">
+        <div class="card lightGreen img-fluid" style="width:500px">
+            <img class="card-img-top species" src="" alt="Card image" style="width:100%">
+          <div class="card-img-overlay inner">
+            <h3 class="card-title" id="savePerTon"></h3>
+            <p class="card-text">per TON.</p>
+            <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+          </div>
+        </div>
+      </div>
+        <div class="col-sm-3">
+        <div class="card lightGreen img-fluid" style="width:500px">
+            <img class="card-img-top species" src="" alt="Card image" style="width:100%">
+          <div class="card-img-overlay inner">
+            <h3 class="card-title" id="savePerThouTon"></h3>
+            <p class="card-text">per THOUSAND TONS.</p>
+            <!--<a href="#" class="btn btn-primary">Go somewhere</a>-->
+          </div>
+        </div>
+      </div>
+    </div>
+      <br>
+      <div class="row">
+                <div class="col-sm-12">
+        <div class="card">
+          <div class="card-body">
+            <p class="card-text">Upon applying Capsozyme SB Plus, we have optimized the SBM price</p>
+              <span>FROM</span><span id="SBMPriceFrom" class="emphasize"></span><span >TO</span><span id="SBMPriceTo" class="emphasize"></span><span>per kilogram.</span>
+          </div>
+        </div>
+      </div>
+      </div>
+      <br>
+      <div class="row">
+        <div class="col-sm-12">
+        <div class="card yellowOrange">
+          <div class="card-body">
+            <h5>SOYBEAN MEAL COST REDUCTION</h5>
+              <div>
+                  <h2 id="SBMCostRed"></h2>
+            </div>
+          </div>
+        </div>
+      </div>
+            
+      </div>
+      
+  </div>
+</div>
+
+      </form>
+       <!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Oops!</h5>
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        Please provide the needed inputs.
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+      </div>
+    </div>
+  </div>
+</div>-->
+        
+    </body>
+  <div class="text-center footer">
+            <div class="container">
+        <span class="text-muted">&#169; 2021 RDLC</span>
+      </div>
+    </div>  
+</html>
+

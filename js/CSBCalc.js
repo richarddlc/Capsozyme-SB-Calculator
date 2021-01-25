@@ -141,6 +141,7 @@ var computeSavingsAndCosts = function(){
     $('#SBMPriceFrom').html(" PhP "+ parseInt(rmpSoybeanMeal).toFixed(2) + " ");
     $('#SBMPriceTo').html(" PhP " + soybeanMealWithCapsozymeSBCostPerKg.toFixed(2) + " ");
     $('#SBMCostRed').html("PhP <span class='emphasize'>" + soybeanCostReduction.toFixed(2) + "</span>" + " /kg.");
+    $('#goToResult')[0].click();
 }
 
 var validateInput = function(){

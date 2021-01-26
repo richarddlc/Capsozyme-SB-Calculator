@@ -1,3 +1,7 @@
+html {
+  scroll-behavior: smooth;
+}
+
 .emphasize {
     text-decoration:underline;
     font-weight:bold

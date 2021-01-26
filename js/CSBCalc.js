@@ -42,9 +42,9 @@ var getCapSBInclusion = function(){
     var capSBI;
     if(rmiWheat>0){
         capSBI = 0.5;
-    }else if(rmiSBMeal>250){
+    }else if(rmiSBMeal>249){
         capSBI = 0.5;
-    }else if(rmiSBMeal>249 && rmiSBMeal<251){
+    }else if(rmiSBMeal>210 && rmiSBMeal<251){
         capSBI = 0.4;
     }else if(rmiSBMeal>149 && rmiSBMeal<201){
         capSBI = 0.3;

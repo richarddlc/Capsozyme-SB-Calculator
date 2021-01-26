@@ -4,6 +4,13 @@ $(document).ready(function() {
     getSelectedAnimalConstants('swine');
     validateInput();
     $(".result").hide();
+    
+        $("#back2Top").click(function(event) {
+        event.preventDefault();
+        $("html, body").animate({ scrollTop: 0 }, "slow");
+        return false;
+    });
+    
 });
 
 var selectedAnimalConstants;
@@ -185,6 +192,15 @@ var clearInputFields = function(){
     $('#goToTop')[0].click();
     $(".result").hide();
 }
+
+$(window).scroll(function() {
+    var height = $(window).scrollTop();
+    if (height > 100) {
+        $('#back2Top').fadeIn();
+    } else {
+        $('#back2Top').fadeOut();
+    }
+});
 
 
    

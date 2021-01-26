@@ -44,9 +44,9 @@ var getCapSBInclusion = function(){
         capSBI = 0.5;
     }else if(rmiSBMeal>249){
         capSBI = 0.5;
-    }else if(rmiSBMeal>210 && rmiSBMeal<251){
+    }else if(rmiSBMeal>210 && rmiSBMeal<250){
         capSBI = 0.4;
-    }else if(rmiSBMeal>149 && rmiSBMeal<201){
+    }else if(rmiSBMeal>149 && rmiSBMeal<200){
         capSBI = 0.3;
     }else if(rmiSBMeal<150){
         capSBI = 0.2;

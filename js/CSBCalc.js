@@ -182,6 +182,7 @@ var clearInputFields = function(){
     for(var i =0; i<inputArray.length; i++){
         validateSingleInput(inputArray[i]);
     }
+    $('#goToTop')[0].click();
     $(".result").hide();
 }
 

@@ -72,6 +72,10 @@
               </div>
               <div class="card-body">
         <div class="form-row">
+            <div class="form-group col-md-4">
+            <label for="rmpSoybeanMeal">Soy Bean Meal</label>
+            <input type="number" class="form-control invalid" id="rmpSoybeanMeal" placeholder="" step="any" name = "rmpSoybeanMeal" onkeyup=" validateSingleInput(this)">
+        </div>
         <div class="form-group col-md-4">
             <label for="rmpCorn">Corn</label>
             <input type="number" class="form-control invalid" id="rmpCorn" placeholder="" step="any" name = "rmpCorn" onkeyup=" validateSingleInput(this)">
@@ -79,36 +83,31 @@
          <div class="form-group col-md-4">
             <label for="rmpCoconutOil">Coconut Oil</label>
             <input type="number" class="form-control invalid" id="rmpCoconutOil" placeholder="" step="any" name = "rmpCoconutOil" onkeyup=" validateSingleInput(this)">
+        </div> 
         </div>
-         <div class="form-group col-md-4">
-            <label for="rmpWheat">Wheat</label>
-            <input type="number" class="form-control invalid" id="rmpWheat" placeholder="" step="any" name = "rmpWheat" onkeyup=" validateSingleInput(this)">
-        </div>
-         <div class="form-group col-md-4">
-            <label for="rmpSoybeanMeal">Soy Bean Meal</label>
-            <input type="number" class="form-control invalid" id="rmpSoybeanMeal" placeholder="" step="any" name = "rmpSoybeanMeal" onkeyup=" validateSingleInput(this)">
-        </div>
-         <div class="form-group col-md-4">
+        <div class="form-row justify-content-center">
+         <div class="form-group col-md-2">
             <label for="rmpLysine">Lysine</label>
             <input type="number" class="form-control invalid" id="rmpLysine" placeholder="" step="any" name = "rmpLysine" onkeyup=" validateSingleInput(this)">
         </div>
-         <div class="form-group col-md-4">
+         <div class="form-group col-md-2">
             <label for="rmpMethionine">Methionine</label>
             <input type="number" class="form-control invalid" id="rmpMethionine" placeholder="" step="any" name = "rmpMethionine" onkeyup=" validateSingleInput(this)">
         </div>
-         <div class="form-group col-md-4">
+         <div class="form-group col-md-2">
             <label for="rmpThreonine">Threonine</label>
             <input type="number" class="form-control invalid" id="rmpThreonine" placeholder="" step="any" name = "rmpThreonine" onkeyup=" validateSingleInput(this)">
         </div>
-         <div class="form-group col-md-4">
+         <div class="form-group col-md-2">
             <label for="rmpTryptophan">Tryptophan</label>
             <input type="number" class="form-control invalid" id="rmpTryptophan" placeholder="" step="any" name = "rmpTryptophan" onkeyup=" validateSingleInput(this)">
         </div>
-         <div class="form-group col-md-4">
+         <div class="form-group col-md-2">
             <label for="rmpValine">Valine</label>
             <input type="number" class="form-control invalid" id="rmpValine" placeholder="" step="any" name = "rmpValine" onkeyup=" validateSingleInput(this)">
         </div>
-    </div>
+        </div>
+    
                 </div>
               <div class="card-footer text-muted">
     <button type="submit" class="btn btn-primary" onclick='computeSavingsAndCosts()'>Compute</button>  

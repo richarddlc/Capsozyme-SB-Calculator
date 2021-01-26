@@ -62,7 +62,6 @@ var computeSavingsAndCosts = function(){
 
     var rmpCorn = $('#rmpCorn').val();
     var rmpCoconutOil = $('#rmpCoconutOil').val();
-    var rmpWheat = $('#rmpWheat').val();
     var rmpSoybeanMeal = $('#rmpSoybeanMeal').val();
     var rmpLysine = $('#rmpLysine').val();
     var rmpMethionine = $('#rmpMethionine').val();
@@ -145,7 +144,7 @@ var computeSavingsAndCosts = function(){
 }
 
 var validateInput = function(){
-        var inputArray  = [$('#rmpCorn'), $('#rmpCoconutOil'), $('#rmpWheat'), $('#rmpSoybeanMeal'), $('#rmpLysine'), $('#rmpMethionine'), $('#rmpThreonine'), $('#rmpTryptophan'), $('#rmpValine'), $('#rmiSoybeanMeal'), $('#rmiWheat')];
+        var inputArray  = [$('#rmpCorn'), $('#rmpCoconutOil'), $('#rmpSoybeanMeal'), $('#rmpLysine'), $('#rmpMethionine'), $('#rmpThreonine'), $('#rmpTryptophan'), $('#rmpValine'), $('#rmiSoybeanMeal'), $('#rmiWheat')];
     
     for(var i =0; i<inputArray.length; i++){
        if($(inputArray[i]).hasClass('invalid')){
@@ -179,7 +178,7 @@ var clearInputFields = function(){
     $('#SBMPriceFrom').html("");
     $('#SBMPriceTo').html("");
     $('#SBMCostRed').html("");
-    var inputArray  = [$('#rmpCorn'), $('#rmpCoconutOil'), $('#rmpWheat'), $('#rmpSoybeanMeal'), $('#rmpLysine'), $('#rmpMethionine'), $('#rmpThreonine'), $('#rmpTryptophan'), $('#rmpValine'), $('#rmiSoybeanMeal'), $('#rmiWheat')];
+    var inputArray  = [$('#rmpCorn'), $('#rmpCoconutOil'), $('#rmpSoybeanMeal'), $('#rmpLysine'), $('#rmpMethionine'), $('#rmpThreonine'), $('#rmpTryptophan'), $('#rmpValine'), $('#rmiSoybeanMeal'), $('#rmiWheat')];
     for(var i =0; i<inputArray.length; i++){
         validateSingleInput(inputArray[i]);
     }

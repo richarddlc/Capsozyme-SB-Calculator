@@ -142,7 +142,7 @@ var computeSavingsAndCosts = function(){
    
     $('#savePerKg').html("PhP " + netSavingsPerKg.toFixed(2));
     $('#savePerBag').html("PhP " + netSavingsPerBag.toFixed(2));
-    $('#savePerTon').html("PhP " + netSavingsPerTon.toFixed(2));
+    $('#savePerTon').html("PhP " + numberWithCommas(netSavingsPerTon.toFixed(2)));
     $('#savePerThouTon').html("PhP " + numberWithCommas(netSavingsPerThouTon.toFixed(2)));
     $('#SBMPriceFrom').html(" PhP "+ parseInt(rmpSoybeanMeal).toFixed(2) + " ");
     $('#SBMPriceTo').html(" PhP " + soybeanMealWithCapsozymeSBCostPerKg.toFixed(2) + " ");
